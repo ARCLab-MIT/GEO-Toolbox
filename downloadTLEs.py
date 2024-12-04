@@ -18,7 +18,7 @@ st_pass = input("Password: ")
 # Log in to Space-Track using your email and password
 st = SpaceTrackClient(identity=st_email, password=st_pass)
 
-# Make a list of all the satcats in Data/trimmedsatcats.csv
+# Make a list of all the satcats in Data/satcats.csv
 satcats = []
 with open("../Data/satcats.csv", encoding='utf-8-sig') as f:
 	reader = csv.reader(f, delimiter=",")
