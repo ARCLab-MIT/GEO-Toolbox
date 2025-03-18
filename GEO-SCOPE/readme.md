@@ -2,4 +2,4 @@
 
 GEO-SCOPE uses the Pattern-of-Life (PoL) framework to characterize geostationary slot utilization and efficiently search for co-located (clustered) GEO satellites within large space object catalogs.
 
-More code and more info will be available shortly!
+This version of the GEO-SCOPE tool is in the process of being reorganized for improved ease of use. More code and documentation will be available shortly!
