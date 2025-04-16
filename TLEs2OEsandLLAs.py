@@ -78,7 +78,7 @@ for satcat in satcats:
 		else:
 			year = int("19"+year_snippet)
 		day_snippet = line1[20:32]
-		fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet))
+		fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet)-1)
 		matplotlib_datetime = matplotlib.dates.date2num(fulldate)
 		# Compute the TLEs orbital paramters at time of its epoch
 		firstepochs.append(matplotlib_datetime)
@@ -96,7 +96,7 @@ for satcat in satcats:
 		else:
 			year = int("19"+year_snippet)
 		day_snippet = line1[20:32]
-		fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet))
+		fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet)-1)
 		matplotlib_datetime = matplotlib.dates.date2num(fulldate)
 		# Compute the TLEs orbital paramters at time of its epoch
 		lastepochs.append(matplotlib_datetime)
@@ -124,7 +124,7 @@ for satcat, firstepoch, lastepoch in zip(satcats,firstepochs, lastepochs):
 			else:
 				year = int("19"+year_snippet)
 			day_snippet = line1[20:32]
-			fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet))
+			fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet)-1)
 			list_of_datetimes.append(fulldate)
 	matplotlib_datetimes = matplotlib.dates.date2num(list_of_datetimes)
 	for t in timesteps:
@@ -147,7 +147,7 @@ for satcat, firstepoch, lastepoch in zip(satcats,firstepochs, lastepochs):
 					else:
 						year = int("19"+year_snippet)
 					day_snippet = line1[20:32]
-					fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet))
+					fulldate = datetime.datetime(year,1,1,0,0,0)+datetime.timedelta(days=float(day_snippet)-1)
 					date = matplotlib.dates.date2num(fulldate)
 					if date == nearest_time: 
 						try:
